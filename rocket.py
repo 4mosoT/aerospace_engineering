@@ -50,9 +50,7 @@ class rocket:
 
 
 if __name__ == '__main__':
-    structure = {'payload': 5000, 'stages': [(50000, 5000, 450), (50000, 5000, 450)]}
-    rocket_1 = rocket(structure)
-    rocket_1.detailed_deltav()
-    structure = {'payload': 5000, 'stages': [(100000, 10000, 450)]}
-    rocket_2 = rocket(structure)
-    rocket_2.detailed_deltav()
+    falcon_9_structure = {'payload': 13150, 'stages': [(395700, 23100, 282), (64820, 3900, 340)]}
+    falcon_9 = rocket(falcon_9_structure)
+    falcon_9.detailed_deltav()
+
