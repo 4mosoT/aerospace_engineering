@@ -3,6 +3,7 @@ from math import log
 
 class rocket:
     def __init__(self, structure):
+        #Stages have to be a list of tuples [(kg of propellant stage 1, kg structural mass stage 1, isp)]
         self.stages = structure['stages']
         self.payload = structure['payload']
 
@@ -44,7 +45,7 @@ class rocket:
     def detailed_deltav(self):
         deltas = [self.delta_v(x) for x in range(len(self.stages))]
         for x, y in enumerate(deltas):
-            print "Stage {} dV is {}".format(x + 1, y)
+            print "Stage {} dV is {}".format(x, y)
         print "Total dV is {}".format(sum(deltas))
 
 
